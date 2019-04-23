@@ -120,7 +120,7 @@ query параметр error с описанием ошибки.
  <input type="hidden" name="orderId" value="87876"> 
  <input type="hidden" name="amount" value="166.70"> 
  <input type="hidden" name="email" value="user@example.ru"> 
- <input type="hidden" name="phone" value="+79090000001"> 
+ <input type="hidden" name="phone" value="79090000001"> 
  <input type="hidden" name="agentTime" value="20:35:67 01.01.2010"> 
  <input type="hidden" name="goods" value="Notebook"> 
  <input type="hidden" name="currency" value="RUR"> 
@@ -161,7 +161,7 @@ query параметр error с описанием ошибки.
  <input type="hidden" name="orderId" value="87876"> 
  <input type="hidden" name="amount" value="166.70"> 
  <input type="hidden" name="email" value="user@example.ru"> 
- <input type="hidden" name="phone" value="+79090000001"> 
+ <input type="hidden" name="phone" value="79090000001"> 
  <input type="hidden" name="agentTime" value="20:35:67 01.01.2010"> 
  <input type="hidden" name="token" value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
  <input type="hidden" name="goods" value="Notebook"> 
@@ -329,7 +329,13 @@ MD5(8686#87876#13:12:03 10.01.2010#166.70#79090000001#MD5(secret))
 MD5(8686#87876#13:12:03 10.01.2010#166.70#79090000001#хххххххххххххххххххххххххххххххх#MD5(secret))
 ````
 
-**secret** — секретная фраза агента, сохраняется через личный кабинет агента MD5 формируется последовательность из 32-х шестнадцатеричных цифр в соответствии с широко распространенным алгоритмом Message Digest 5 (MD5). <br/>
+**secret** — секретная фраза агента, получить её можно из личного кабинета агента. MD5 формируется последовательность из 32-х шестнадцатеричных цифр в соответствии с широко распространенным алгоритмом Message Digest 5 (MD5). <br/>
+
+Следует внимательно проверить данные которые используются для формирования подписи и для отправки запроса. В случае если эти данные будут
+отличаться сгенерируются не совпадающие подписи и проверка безопасности не будет пройдена.
+
+[![secret](images/shop-api-key-small.png "ключ API")](images/shop-api-key.png)
+
 #### При отправке оповещения о статусе платежа
 Высылая оповещение о проведении платежа, система Payin-payout передает реквизиты платежа и контрольную подпись, позволяющую проверять неизменность передаваемых данных. <br/>
 Контрольная подпись данных о платеже позволяет продавцу проверять источник данных, переданных на продавцу. <br/>
