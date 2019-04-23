@@ -173,7 +173,7 @@ curl  https://lk.payin-payout.net/api/rpay/token --data 'agentId=...&orderId=...
 ### Пример запроса при оплате платежа токеном
 
 ````
-curl  https://lk.payin-payout.net/api/rpay/token --data 'agentId=8686&orderId=87876&agentName=Superstore&amount=166.70&goods=Notebook&email=user@example.ru&phone=+79090000001&agentTime="20:35:67 01.01.2010"&token=ds.......kf&currency=RUR&preference=125&sign=980......84f'
+curl  https://lk.payin-payout.net/api/rpay/token --data 'agentId=8686&orderId=87876&agentName=Superstore&amount=166.70&goods=Notebook&email=user@example.ru&phone=79090000001&agentTime="20:35:67 01.01.2010"&token=ds.......kf&currency=RUR&preference=125&sign=980......84f'
 
 
 ````
